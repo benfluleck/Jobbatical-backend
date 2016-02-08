@@ -1,9 +1,10 @@
 
 # Endpoints
 
-## /topActiveUsers
+#### /topActiveUsers?page={pageNumber}
 
 Returns user info, count of applications in the last week and the names of the 3 latest applied listings.
+
 
 ```
 [
@@ -22,7 +23,7 @@ Returns user info, count of applications in the last week and the names of the 3
 ]
 ```
 
-## /users?id={user.id}
+#### /users?id={user.id}
 
 Takes user id and returns:
 

@@ -4,11 +4,11 @@ Your goal is to implement backend JSON API for an internal tool for getting an o
 
 The tool consists of 2 views:
 
-## Overview
+### Overview
 
 This shows a list of most active users in the past week, orders the entries by activity and has pagination support.
 
-## Detailed view
+### Detailed view
 
 Shows info for user by id:
 

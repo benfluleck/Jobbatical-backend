@@ -19,7 +19,7 @@ Shows info for user by id:
 
 Info for connected resources does not need to be paginated in this view, but needs to be limited to a maximum of 5 entries.
 
-See the assumed structure for both of the service endpoints in spec.md.
+See the assumed structure for both of the service endpoints in `spec.md`.
 
 Base database structure is fixed - you may not alter the underlying table structure. See definitions in `tables.sql`.
 

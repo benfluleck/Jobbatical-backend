@@ -24,3 +24,13 @@ See the assumed structure for both of the service endpoints in spec.md.
 Base database structure is fixed - you may not alter the underlying table structure. See definitions in `tables.sql`.
 
 There is some starting dummy data in `data.sql` but feel free to add more. You don't need to have your testing data in your submission. The assumption is that the service stays performant with hundreds of thousands users, companies, listings and applications.
+
+## General requirements
+
+* Before(!) coding, send us a notice of the date you estimate the task to be completed as well as how many working hours it will take. We expect this information within 24 hours after receiving the assignment;
+* Implement it as a HTTP service in NodeJS;
+* Implement both endpoints to take the arguments and return JSON with structure specified in `spec.md`;
+* Use git and Github or Bitbucket. Share your repository URL as early as possible - we do not expect any work do be done yet upon receiving the URL;
+* Test and document your work.
+
+In case of any questions or comments send us an email.

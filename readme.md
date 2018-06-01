@@ -31,6 +31,7 @@ There is some starting dummy data in [`data.sql`](./db/data.sql) but feel free t
 * Implement it as a HTTP service in NodeJS, PostgreSQL database;
 * Implement both endpoints to take the arguments and return JSON with structure specified in [`spec.md`](./spec.md);
 * Use git and Github or Bitbucket. Share your repository URL as early as possible - we do not expect any work do be done yet upon receiving the URL;
+* Include a Dockerfile;
 * Test and document your work.
 
 In case of any questions or comments send us an email.

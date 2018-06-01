@@ -28,6 +28,7 @@ There is some starting dummy data in [`data.sql`](./db/data.sql) but feel free t
 ## General requirements
 
 * Before(!) coding, send us a notice of the date you estimate the task to be completed as well as how many working hours it will take. We expect this information within 24 hours after receiving the assignment;
+* Show us your best code - even though it's a hypothetical scenario, build the service to be ready for production;
 * Implement it as a HTTP service in NodeJS, PostgreSQL database;
 * Implement both endpoints to take the arguments and return JSON with structure specified in [`spec.md`](./spec.md);
 * Use git and Github or Bitbucket. Share your repository URL as early as possible - we do not expect any work do be done yet upon receiving the URL;

@@ -5,7 +5,6 @@
 
 Returns user info, count of applications in the last week and the names of the 3 latest applied listings.
 
-
 ```
 [
 	{
@@ -31,7 +30,6 @@ Takes user id and returns:
 * connected companies;
 * listings created by the user;
 * applications the user has made with the info of the listing the application is made to.
-
 
 ```
 {

@@ -3,7 +3,7 @@
 
 #### /topActiveUsers?page={pageNumber}
 
-Returns user info, count of applications in the last week and the names of the 3 latest applied listings.
+Returns user info, count of applications in the last week and the names of the 3 latest applied listings. All the users should be listed and ordered by total activity.
 
 ```
 [

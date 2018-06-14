@@ -1,12 +1,12 @@
 # Dashboard for top active users
 
-Your goal is to implement backend JSON API for an internal tool for getting an overview on the most active users. Activity is a measure of applied listings.
+Your goal is to implement backend JSON API for an internal tool for getting an overview on the most active users. Activity is a measure of total count of listings applied to.
 
 The tool consists of 2 views:
 
 ### Overview
 
-This shows a list of most active users in the past week, orders the entries by activity and has pagination support.
+This shows a list of most active users in the past week, orders them by activity and has pagination support.
 
 ### Detailed view
 

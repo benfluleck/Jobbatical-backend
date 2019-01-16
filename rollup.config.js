@@ -1,3 +1,5 @@
+import { terser } from 'rollup-plugin-terser'
+
 const dependencies = Object.keys(require('./package.json').dependencies)
 
 const dist = 'dist'
@@ -7,8 +9,9 @@ export default {
   output: [
     {
       file: `${dist}/bundle.cjs.js`,
-      format: 'cjs'
-    }
+      format: 'cjs',
+    },
   ],
-  external: [...dependencies, 'dotenv']
+  external: [...dependencies, 'dotenv'],
+  plugins: [terser()],
 }

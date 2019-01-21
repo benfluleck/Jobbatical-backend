@@ -1,5 +1,8 @@
 require('dotenv').config()
-
+/***
+ * @description - config environment variables
+ *
+ */
 const config = {
   development: {
     database: process.env.DEV_DB_DATABASE,

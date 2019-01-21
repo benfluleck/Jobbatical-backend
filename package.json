@@ -9,7 +9,7 @@
     "lint": "eslint '**/*js'",
     "lint:fix": "prettier-eslint '**/*js' --write",
     "build:watch": "rollup -c -w",
-    "start:server": "npm run build && nodemon dist/bundle.cjs.js"
+    "server:dev": "npm run build && nodemon dist/bundle.cjs.js"
   },
   "husky": {
     "hooks": {

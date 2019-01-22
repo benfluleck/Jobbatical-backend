@@ -5,7 +5,7 @@ readme.md
 node_modules
 .env
 dist
-
+post
 
 ############################
 # Tests
@@ -13,3 +13,4 @@ dist
 coverage
 .coveralls.yml
 .nyc_output
+postgres_data

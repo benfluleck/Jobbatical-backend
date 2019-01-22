@@ -9,6 +9,6 @@ const port = process.env.PORT || 3000
 
 app.listen(port, () => {
   return console.log(
-    `Welcome to hold the door application, listening on ${port}`
+    `Welcome to the hold the door application, listening on ${port}`
   )
 })

@@ -42,7 +42,7 @@ This is a javascript application built with [**Node JS**](https://nodejs.org/en/
 npm run build
 npm run start:server
 ```
-*Docker*
+**Docker**
 - To run the application in docker you need to install it.
 There are some good docs [here](https://docs.docker.com/)
 Open an .env file in the .docker folder to pass your environment variables to Docker

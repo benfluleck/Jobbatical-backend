@@ -1,0 +1,31 @@
+version: '3.1'
+
+services:
+  app:
+    container_name: docker-task-top-active-users-api
+    build:
+      context: .
+      dockerfile: .docker/app.dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - DEV_DB_DATABASE=${DEV_DB_DATABASE}
+      - POSTGRES_USERNAME=${POSTGRES_USERNAME}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - DEFAULT_LIMIT=${DEFAULT_LIMIT}
+      - DEV_PORT=${DEV_PORT}
+      - MAX_POOL=${MAX_POOL}
+      - TIMEOUT=${TIMEOUT}
+      - DB_HOST=${DB_HOST}
+  db:
+    build:
+      context: .
+      dockerfile: .docker/db.dockerfile
+
+    environment:
+      - POSTGRES_USERNAME=${POSTGRES_USERNAME}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - DEFAULT_LIMIT=${DEFAULT_LIMIT}
+      - DEV_PORT=${DEV_PORT}
+      - TIMEOUT=${TIMEOUT}
+      - DB_HOST=${DB_HOST}

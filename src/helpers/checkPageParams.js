@@ -7,15 +7,16 @@ export const checkPageParams = (req, res) => {
     if (query.hasOwnProperty('page')) {
       isNumber(query.page)
     }
-    const { page: pageNumber } = query
+    const { limit, page: pageNumber } = query
 
-    const limit = process.env.DEFAULT_LIMIT || null
+    const pageLimit = limit || null
 
-    if (pageNumber && !limit) {
+    if (pageNumber && !pageLimit) {
       throw Error('Please Enter a default page limit')
     }
+
     return {
-      limit,
+      pageLimit,
       pageNumber,
     }
   } catch (error) {

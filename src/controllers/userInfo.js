@@ -19,7 +19,9 @@ export const getUserInfo = (req, res) => {
     isNumber(id)
 
     pool.query(queries.getUserInfo, [id], (error, response) => {
-      if (error) { return res.status(500).send({ status: 'error', message: error.message }) }
+      if (error) {
+        return res.status(500).send({ status: 'error', message: error.message })
+      }
 
       if (!response.rows.length) {
         return res.status(404).send({
@@ -33,6 +35,8 @@ export const getUserInfo = (req, res) => {
       const userInfo = {}
 
       for (let i = 0; i < data.length; i++) {
+        const userId = data[i].user_id
+
         const company = {
           id: data[i].company_id,
           createdAt: data[i].companies_created_at,
@@ -56,18 +60,18 @@ export const getUserInfo = (req, res) => {
           coverLetter: data[i].cover_letter,
         }
         const user = {
-          id: data[i].user_id,
+          id: userId,
           name: data[i].user_name,
           companies: new Set(),
           createdListings: new Set(),
           applications: new Set(),
         }
-        if (!userInfo[data[i].user_id]) {
-          userInfo[data[i].user_id] = user
+        if (!userInfo[userId]) {
+          userInfo[userId] = user
         }
-        userInfo[data[i].user_id].companies.add(company)
-        userInfo[data[i].user_id].applications.add(application)
-        userInfo[data[i].user_id].createdListings.add(listing)
+        userInfo[userId].companies.add(company)
+        userInfo[userId].applications.add(application)
+        userInfo[userId].createdListings.add(listing)
       }
 
       let currentUser = userInfo[id]
@@ -78,13 +82,11 @@ export const getUserInfo = (req, res) => {
         createdListings: [...currentUser.createdListings],
       }
 
-      res
-        .status(200)
-        .send({
-          status: 'success',
-          message: 'User Info Returned',
-          response: currentUser,
-        })
+      res.status(200).send({
+        status: 'success',
+        message: 'User Info Returned',
+        response: currentUser,
+      })
     })
   } catch (error) {
     return res

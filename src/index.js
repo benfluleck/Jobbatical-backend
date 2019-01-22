@@ -12,3 +12,5 @@ app.listen(port, () => {
     `Welcome to the hold the door application, listening on ${port}`
   )
 })
+
+export default app

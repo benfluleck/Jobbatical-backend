@@ -20,10 +20,13 @@ insert into teams (company_id, user_id, contact_user) values
 ;
 
 insert into listings (id, created_at, created_by, name, description) values
-	(1, (now() - interval '170 days'), 1, 'Join us conquering the world!', 'This is your best chance to be on the right side of the equation...')
+	(1, (now() - interval '170 days'), 1, 'Join us conquering the world!', 'This is your best chance to be on the right side of the equation...'),
+	(2, (now()),1, 'I will conquer the world','This is your best chance to be on the right side of the equation...')
 ;
 
 insert into applications (id, created_at, user_id, listing_id, cover_letter) values
 	(1, (now() - interval '165 days'), 2, 1, 'Hello, I am Bob'),
-	(2, (now() - interval '164 days'), 5, 1, 'Hello, I am Evan')
+	(2, (now() - interval '164 days'), 5, 1, 'Hello, I am Evan'),
+	(3,(now()),	4,	1, 'Hello, I am Carl'),
+	(4, (now()),	3,	2, 'Hello, I am Carl')
 ;

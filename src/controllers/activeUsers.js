@@ -14,13 +14,13 @@ export const getActiveUsers = (req, res) => {
   let activeUsers = {}
 
   try {
-    const { limit, pageNumber } = checkPageParams(req, res)
+    const { pageLimit, pageNumber } = checkPageParams(req, res)
 
-    const offset = (pageNumber - 1) * limit || 0
+    const offset = (pageNumber - 1) * pageLimit || 0
 
     pool.query(
       queries.topActiveUsersQuery,
-      [limit, offset],
+      [pageLimit, offset],
       (error, response) => {
         if (error) {
           return res
@@ -33,23 +33,25 @@ export const getActiveUsers = (req, res) => {
         if (!response.rows.length) {
           return res.status(200).send({
             status: 'success',
-            message: 'No Active Users available',
+            message: 'No Active Users available on this Page',
           })
         }
 
         for (let i = 0; i < data.length; i++) {
+          const listingName = data[i]['listing_name']
+          const userId = data[i].user_id
+
           const userListing = {
-            id: data[i].user_id,
+            id: userId,
             createdAt: data[i].created_at,
             name: data[i].user_name,
             count: data[i].number_of_applications,
-            listing: [],
+            listing: [listingName],
           }
 
-          const listingName = data[i]['listing_name']
-          !activeUsers[data[i].user_id]
-            ? (activeUsers[data[i].user_id] = userListing)
-            : activeUsers[data[i].user_id].listing.push(listingName)
+          !activeUsers[userId]
+            ? (activeUsers[userId] = userListing)
+            : activeUsers[userId].listing.push(listingName)
         }
 
         return res.status(200).send({

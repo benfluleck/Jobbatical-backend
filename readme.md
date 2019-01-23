@@ -42,6 +42,8 @@ This is a javascript application built with [**Node JS**](https://nodejs.org/en/
 npm run build
 npm run start:server
 ```
+*N.B: The build is minified using Babel if you would like to unminify you have to edit the .babelrc*
+
 **Docker**
 - To run the application in docker you need to install it.
 There are some good docs [here](https://docs.docker.com/)

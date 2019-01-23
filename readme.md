@@ -9,8 +9,8 @@ The goal was to implement backend JSON API for an internal tool for getting an o
 - [Getting Started](#getting-started)
 - [Technology Stack](#technology-stack)
 - [Installation](#installation)
-- [Testing](#testing)
 - [API Endpoints](#api-endpoints)
+- [Testing](#testing)
 - [Questions](#questions)
 - [Support or Contribution](#support-or-contribution)
 

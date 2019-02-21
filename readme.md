@@ -29,7 +29,7 @@ This is a javascript application built with [**Node JS**](https://nodejs.org/en/
 
 1. Install [**Node JS**](https://nodejs.org/en/).
 
-2. Clone the [**repository here**](https://github.com/benfluleck/random-phone-number-generator)
+2. Clone the [**repository here**](https://github.com/benfluleck/hold-the-door)
 3. [**cd**] into the root of the **project directory**.
 4. Run `yarn install` on the terminal to install project dependecies
 5. Create a `.env` file in the root directory of the application. Example of the content of a .env file is shown in the .env.example

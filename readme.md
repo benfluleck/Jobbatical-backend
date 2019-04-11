@@ -1,5 +1,7 @@
 # Dashboard for top active users
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/benfluleck/hold-the-door.svg)](https://greenkeeper.io/)
+
 The goal was to implement backend JSON API for an internal tool for getting an overview on the most active users. Activity is a measure of total count of listings applied to.
 
 
